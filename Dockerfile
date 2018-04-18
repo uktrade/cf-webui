@@ -4,6 +4,7 @@ ENV APP_ROOT /app
 ENV PORT 8080
 ENV NGINX_RESOLVER "8.8.8.8 8.8.4.4 1.1.1.1"
 ENV FORCE_HTTPS 1
+EXPOSE $PORT
 
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
     apt-get update && \
